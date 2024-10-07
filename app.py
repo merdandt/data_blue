@@ -18,7 +18,7 @@ def get_sql_from_text(prompt_list, question):
 st.set_page_config(page_title="SQL Expert Data Blue", page_icon="🇹🇲")
 
 # 1. Add image at the top
-col1, col2, col3 = st.columns([1, 2, 1])
+col1, col2, col3 = st.column([1, 2, 1])
 
 with col1:
     st.write("")
@@ -44,6 +44,12 @@ if st.button("Planet Dataset"):
 # 3. Make ddl_input clearable
 ddl_input = st.text_area("Enter the DDL for the database", key="ddl", height=200)
 
+if st.button("Clear DDL"):
+    st.session_state['ddl'] = ''
+    ddl_input = ''
+    
+    
+    
 st.caption("Enter the DDL for the database so that Data Blue can understand the content and the relationships between tables. Or choose from the datasets below.")
 
 request = st.text_input("Enter your request", key="request")
@@ -58,6 +64,9 @@ st.markdown("""
 submit = st.button("Generate SQL Query")
 
 if submit:
-    sql = get_sql_from_text([ddl_input, pr.PROMPT_1], request)
-    print(sql)
-    st.write(sql)
+    if not ddl_input.strip():
+        st.error("Please enter the DDL for the database before generating a SQL query.")
+    else:
+        sql = get_sql_from_text([ddl_input, pr.PROMPT_1], request)
+        print(sql)
+        st.code(sql, language='sql')
