@@ -24,10 +24,11 @@ with col1:
     st.write("")
 
 with col2:
-    st.image("assets/tako.png", width=150)
+    st.image("assets/blue.jpg", width=250)
 
 with col3:
     st.write("")
+    
 st.header("Chat With Data Blue")
 
 st.caption("Enter the DDL for the database in order for Data Blue to understand the content and the relationships between tables. \n Or choose from the datasets below.")
