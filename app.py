@@ -43,11 +43,16 @@ if st.button("Planet Dataset"):
 # 3. Make ddl_input clearable
 ddl_input = st.text_area("Enter the DDL for the database", key="ddl", height=200)
 
-st.caption("Enter the natural language request and Data Blue will convert it to an SQL query.")
+st.caption("Enter the DDL for the database so that Data Blue can understand the content and the relationships between tables. Or choose from the datasets below.")
 
 request = st.text_input("Enter your request", key="request")
 
-st.caption("For example: \n Show me all students from California. \n How to get all students majoring in MIS and living in any state except New York \n Using a GROUP BY Clause, write an SQL statement that shows the TOP 3 hometowns of Employees based on total salaries being paid. Use the TOP and ORDER BY Clause to solve.")
+st.markdown("**For example:**")
+st.markdown("""
+- Show me all students from California.
+- How do I get all students majoring in MIS and living in any state except New York?
+- Using a GROUP BY clause, write an SQL statement that shows the top 3 hometowns of employees based on total salaries being paid. Use the TOP and ORDER BY clauses to solve.
+""")
 
 submit = st.button("Generate SQL Query")
 
