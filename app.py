@@ -18,7 +18,7 @@ def get_sql_from_text(prompt_list, question):
 st.set_page_config(page_title="SQL Expert Data Blue", page_icon="🇹🇲")
 
 # 1. Add image at the top
-col1, col2, col3 = st.column([1, 2, 1])
+col1, col2, col3 = st.columns([1, 2, 1])
 
 with col1:
     st.write("")
