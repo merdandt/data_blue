@@ -1,5 +1,4 @@
-STUDENT = """
-CREATE TABLE STUDENT(
+STUDENT = """CREATE TABLE STUDENT(
 StudentID Int Not Null IDENTITY (1,1),
 LastName CHAR(30) Not Null,
 FirstName CHAR(30) Not Null,
@@ -93,8 +92,7 @@ CONSTRAINT STUDENT_CLASS_CLASS_FK FOREIGN KEY(CRN) REFERENCES CLASS (CRN),
 );
 """
 
-ANTIQUE = """
-CREATE TABLE CUSTOMER(
+ANTIQUE = """CREATE TABLE CUSTOMER(
 CustomerID Int NOT Null IDENTITY (1,1),
 LastName Char(30) Not Null,
 FirstName Char(30) Not Null,
@@ -169,8 +167,7 @@ TRAINING_COURSE(TrainingID),
 );
 """
 
-PLANET = """
-CREATE TABLE PLANET(
+PLANET = """CREATE TABLE PLANET(
 PlanetID Int Not Null IDENTITY (1,1),
 Name Char(30) Not Null,
 Mass Numeric(10,3) Not Null,
