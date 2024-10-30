@@ -1,10 +1,10 @@
 # Natural Language to SQL Converter
 
-Convert user natural language queries into SQL statements based on provided DDL using **Gemeni** and **Streamlit**.
+Convert user natural language queries into SQL statements based on provided DDL using **Gemini** and **Streamlit**.
 
 ## Overview
 
-This project allows users to input queries in natural language and converts them into SQL queries based on a given database schema (DDL). It leverages the power of **Gemeni** for natural language processing and **Streamlit** for creating an interactive web application.
+This project allows users to input queries in natural language and convert them into SQL queries based on a given database schema (DDL). It leverages the power of **Gemini** for natural language processing and **Streamlit** for creating an interactive web application.
 
 ## Features
 
